@@ -15,8 +15,8 @@ export default function Classes() {
   return (
     <section id="classes" className="py-24 px-6 bg-gray-50/50">
       <div className="container-custom">
-        <SectionTitle 
-          title={CLASSES_CONTENT.title} 
+        <SectionTitle
+          title={CLASSES_CONTENT.title}
           subtitle="Pilih program yang paling sesuai dengan kebutuhan putra-putri Anda"
         />
 
@@ -75,7 +75,7 @@ export default function Classes() {
         {/* Private Classes Section */}
         <div className="relative">
           <div className="absolute inset-0 bg-primary/5 -skew-y-3 rounded-[3rem] -z-10" />
-          
+
           <div className="py-20 px-8 md:px-16">
             <div className="max-w-5xl mx-auto">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -94,16 +94,17 @@ export default function Classes() {
                   </Button>
                 </div>
 
-                <div className="bg-white p-10 rounded-[2rem] shadow-2xl border border-primary/10">
-                  <h4 className="text-2xl font-bold text-gray-900 mb-8">
+                {/* Fixed: responsive padding, text sizes, and spacing for mobile */}
+                <div className="bg-white p-6 md:p-10 rounded-[1.5rem] md:rounded-[2rem] shadow-2xl border border-primary/10">
+                  <h4 className="text-xl md:text-2xl font-bold text-gray-900 mb-5 md:mb-8">
                     Mengapa Private?
                   </h4>
-                  <ul className="space-y-6">
+                  <ul className="space-y-4 md:space-y-6">
                     {CLASSES_CONTENT.privateFeatures.map((feature, index) => (
-                      <li key={index} className="flex items-start gap-4">
-                        <div className="w-6 h-6 bg-primary/10 text-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <li key={index} className="flex items-start gap-3 md:gap-4">
+                        <div className="w-5 h-5 md:w-6 md:h-6 bg-primary/10 text-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                           <svg
-                            className="w-4 h-4"
+                            className="w-3 h-3 md:w-4 md:h-4"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -111,7 +112,7 @@ export default function Classes() {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                           </svg>
                         </div>
-                        <span className="text-lg text-gray-700 font-medium">{feature}</span>
+                        <span className="text-base md:text-lg text-gray-700 font-medium">{feature}</span>
                       </li>
                     ))}
                   </ul>
